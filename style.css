@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #6bb29d;
+}
+
+/* Main white box */
+.container {
+  width: 70%; /* smaller width = more side space */
+  margin: 30px auto; /* less top/bottom space */
+  background-color: white;
+  padding: 40px 60px; /* more left/right padding */
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* helps on small screens */
+}
+
+.logo {
+  color: #6bb29d;
+}
+
+/* Navigation */
+.nav {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+}
+
+.nav li {
+  cursor: pointer;
+}
+
+/* Main section */
+.main {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+
+/* Text side */
+.text {
+  width: 50%;
+}
+
+.text h1 {
+  font-size: 30px;
+}
+
+.text span {
+  color: #6bb29d;
+}
+
+.text p {
+  font-size: 14px;
+  color: gray;
+}
+
+/* Button */
+button {
+  background-color: #6bb29d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+/* Image side */
+.image {
+  width: 50%;
+  text-align: center;
+}
+
+.image img {
+  width: 300px;
+  max-width: 100%;
+}
+
+/*  TABLET VIEW */
+
+@media (max-width: 900px) {
+  .container {
+    width: 90%;
+  }
+
+  .main {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text,
+  .image {
+    width: 100%;
+  }
+
+  .text h1 {
+    font-size: 26px;
+  }
+
+  .image {
+    margin-top: 20px;
+  }
+}
+
+/*  MOBILE VIEW */
+@media (max-width: 500px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .text h1 {
+    font-size: 22px;
+  }
+
+  .text p {
+    font-size: 13px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
